@@ -4,7 +4,7 @@ import CurrencySelector from './components/currency-selector'
 import Header from './components/header'
 
 function App() {
-  const {getCurrencies, getExchangeRate, getApiUsage, setCurrentInput, currencies, headerText} = useContext(AllContext)
+  const {getCurrencies, getExchangeRate, setCurrentInput} = useContext(AllContext)
   
   useEffect(() => {
     getCurrencies()
@@ -15,7 +15,6 @@ function App() {
     <div className="app" onClick={(e) => e.target.className !== 'currency-list-input' && setCurrentInput('')}>
       <h1>Currency Converter</h1>
       <Header />
-      {/* <button onClick={() => console.table(currencies)}>click</button> */}
       <CurrencySelector name="from" index={0}/>
       <CurrencySelector name="to" index={1}/>
     </div>

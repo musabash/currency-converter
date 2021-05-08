@@ -128,9 +128,9 @@ function AllContextProvider({children}) {
     setHeaderText
   }
   return (
-      <AllContext.Provider value={value}>
-          {children}
-      </AllContext.Provider>
+    <AllContext.Provider value={value}>
+        {children}
+    </AllContext.Provider>
   )
 }
 
