@@ -98,7 +98,7 @@ function AllContextProvider({children}) {
   function onChangeHandler(value, index) {
     let convertedValue = 0
     index === 0 ? convertedValue = value * exchangeRate : convertedValue = value / exchangeRate
-    setValues(values.map((_, i) => i === index ? value : convertedValue))
+    setValues(values.map((_, i) => i === index ? value : Number(convertedValue.toFixed(6))))
   }
     
   const value = {

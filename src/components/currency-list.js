@@ -40,6 +40,7 @@ export default function CurrencyList({name, index}){
           {currencies.map((currency, index) => (currency.id + currency.currencyName).toLowerCase().includes(searchQuery.toLowerCase()) &&
           <input 
             className="currency"
+            type="text"
             onClick={(e) => currencyChooser(e, currency.currencyName)}
             key={index}
             name={currency.id}

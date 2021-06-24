@@ -4,9 +4,10 @@ import CurrencyList from './currency-list'
 
 export default function CurrencySelector({name, index}){
   const { values, onChangeHandler } = useContext(AllContext)
+  const invalidChars = ["-", "e", "+"]
 
   const keyDownHandler = (e) => {
-    if(e.key === "-"){
+    if(invalidChars.includes(e.key)){
       e.preventDefault();
     }
   }
